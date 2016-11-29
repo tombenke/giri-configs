@@ -1,0 +1,16 @@
+{
+    "name": "papricas",
+    "sectorId": "74d9ac33-c3f2-4ba7-8d7e-89ede93ed191",
+    "clusterId": "79e914da-5103-4651-abb1-70214d2270a7",
+    "config": {
+        "mode": "AUTO",
+        "startAt": "0 7 * * *",
+        "stopAt": "0 8 * * *"
+    },
+    "state": "OFF",
+    "idx": 2,
+    "port": {
+        "deviceId": "53181aca-1dad-4cc0-86b6-eaf59dd01989",
+        "portIdx": 2
+    }
+}

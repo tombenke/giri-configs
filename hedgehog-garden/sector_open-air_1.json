@@ -1,0 +1,16 @@
+{
+    "name": "cucumbers",
+    "sectorId": "aa0eb245-eb9e-4815-88f5-891bc89ca0d8",
+    "clusterId": "79e914da-5103-4651-abb1-70214d2270a7",
+    "idx": 1,
+    "config": {
+        "mode": "AUTO",
+        "startAt": "0 6 * * *",
+        "stopAt": "0 7 * * *"
+    },
+    "state": "OFF",
+    "port": {
+        "deviceId": "53181aca-1dad-4cc0-86b6-eaf59dd01989",
+        "portIdx": 1
+    }
+}
