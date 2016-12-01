@@ -5,6 +5,8 @@
 # Tamás Benke
 #
 
+source curl_functions.sh
+
 declare -rx SCRIPT_DESCRIPTION="giri system initialization"
 declare -rx RUNDIR=`dirname ${0}`
 
@@ -12,25 +14,19 @@ declare -rx RUNDIR=`dirname ${0}`
 # or set it on other way in advance, before starting the script.
 . ${RUNDIR}/local.env
 
-declare -rx SERVER="http://${HOST}:${PORT}/${URI_PREFIX}"
-declare -rx JSONDIR="${RUNDIR}"
-
 # Echo some hints on what is happening
 echo "Running ${SCRIPT_DESCRIPTION} script in ${RUNDIR}"
 echo "Use '${JSONDIR}' as base folder for data JSON config files"
 
 echo "Create system..."
-curl -X PUT ${SERVER}/systems/2a1152ee-4d77-4ff4-a811-598555937625 \
-    -H "Content-Type: application/json" \
-    --data-binary @${JSONDIR}/system_hedgehog-garden.json
+put "/systems/2a1152ee-4d77-4ff4-a811-598555937625" "system_hedgehog-garden.json"
 
-echo
-#echo "Create Clusters..."
-#curl -X PUT ${SERVER}/cluesters/2a1152ee-4d77-4ff4-a811-598555937625 \
-#    -H "Content-Type: application/json" \
-#    --data-binary @${JSONDIR}/cluster_open-air.json
+echo "Create Clusters..."
+put "/clusters/2a1152ee-4d77-4ff4-a811-598555937625" "cluster_open-air.json"
+put "/clusters/d64d2325-c7b0-4bc7-9178-8ec76ac7355c" "cluster_politunnel.json"
 
-echo
 echo "See the systems created:"
-curl ${SERVER}/systems
-echo
+get "/systems"
+
+echo "See the clusters created:"
+get "/clusters"
