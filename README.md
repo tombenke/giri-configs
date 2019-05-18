@@ -4,9 +4,9 @@ giri-configs
 Central repository for the different kind of giri configurations.
 
 This repository holds the configuration files in JSON (or YAML) format.
-Each configuration has its own subfolder under the `systems` directory.
+Each configuration has its own subfolder under the [`systems` directory](sistems/).
 
-The `bin` folder contains the utilities, which makes possible the setup of the several systems based on the config files.
+The [`bin`](bin) folder contains the utilities, which makes possible the setup of the several systems based on the config files.
 
 ## Usage
 
