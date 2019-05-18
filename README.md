@@ -31,6 +31,4 @@ In order to initialize a system you have to execute a two-step process:
 
 - [giri home page](https://github.com/tombenke/giri)
 - [giri-rest-api](https://github.com/tombenke/giri-rest-api)
-- [giri-rest-api-mock](https://github.com/tombenke/giri-rest-api-mock)
-- [giri-web](https://github.com/tombenke/giri-web)
 
